@@ -1,0 +1,449 @@
+<html lang="en">
+
+<head>
+	
+	<title>Pricing component with toggle</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+		
+		
+		* {
+  font-family: 'Montserrat', sans-serif;
+}
+	
+		body{
+
+			opacity: 0.9;	
+			perspective: 500px;
+			
+			background: url(back.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		
+		}
+		h1{
+			
+			text-align: center;
+			font-size: 35px;
+				transition: 3s;
+						
+opacity: 0.7;
+			
+			font-family: sans-serif;
+			
+			
+			}
+			
+			
+			
+			
+			
+		#all1{
+			
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			transition: 3s;
+			border-radius: 15px;
+			
+		}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			
+		
+		h2{
+			position: relative;
+			top:8px;
+			bottom: 0px;
+			text-align: center;
+			opacity: 0.7;
+				transition: 3s;
+			
+		}
+	
+	
+		#all{
+		
+			height: 100%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		
+			
+			
+		position: relative;
+			flex-wrap: wrap;
+			
+	
+		}
+		
+		#cart1{
+			
+			height: 450px;
+			width: 370px;
+			background-color: aliceblue;
+			border-radius: 15px;
+			text-align: center;
+			transform-style: preserve-3d;
+			transition: 2s;
+			
+			
+		}
+	/*	#cart1:hover{
+			transform:rotateY(180deg);
+		}
+		#cart1 div{
+			position: absolute;
+			height: 470px;
+			width: 350px;
+			background-color: aliceblue;
+			border-radius: 15px;
+			text-align: center;
+		}
+		#front{
+	
+			z-index: 2;
+			backface-visibility: hidden;
+				
+		}
+		#back{  
+		
+			z-index: 1;
+			transform: rotateY(180deg);
+		} */
+		
+		#cart2{
+			
+			border-radius: 10px;
+			text-align: center;
+		/*	height: 475px;
+			width: 395px; */
+			transform:scale(1.08);
+			height: 450px;
+			width: 370px;
+			z-index: 1000;
+			background-color: #5959a2;
+			border-radius: 15px;
+			flex-grow: 0;
+			opacity: 0.7;
+		}
+		
+		
+		#cart3{
+			border-radius: 10px;
+			text-align: center;
+			height: 450px;
+			width: 370px;
+			background-color: aliceblue;
+			border-radius: 15px;
+			
+		}
+		header{
+			font-size: 70px;
+			font-family: sans-serif;
+			font-weight: 500;
+			opacity: 0.7;
+			
+		}
+		button{
+			font-size: 16px;
+			font-family: sans-serif;
+			border-radius: 7px;
+			width: 270px;
+			height: 46px;
+			background-color: #5959a2;
+			color:white;
+			opacity: 0.7;
+			cursor: inherit;
+		}
+		#button2{
+			font-size: 16px;
+			font-family: sans-serif;
+			border-radius: 7px;
+			width: 270px;
+			height: 46px;
+			background-color: aliceblue;
+			color:black;
+			opacity: 0.7;
+			cursor: inherit;
+		}
+		.purple-bg {
+  background: #A3A8F0;
+background: -webkit-linear-gradient(top left, rgba(163,168,240,1) 0%, rgba(105,111,221,1) 100%);
+background: -o-linear-gradient(top left, rgba(163,168,240,1) 0%, rgba(105,111,221,1) 100%);
+background: linear-gradient(to bottom right, rgba(163,168,240,1) 0%, rgba(105,111,221,1) 100%);
+			
+			transform-style: preserve-3d;
+}
+		.selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+			transform-style: preserve-3d;
+
+}
+
+.btn-bg {
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto 1em;
+    padding: 2px 3px;
+	transform-style: preserve-3d;
+}
+
+.gray {
+  color: #B3B5C6;
+}
+.transition {
+    transform: translateX(100%);
+}
+
+.btn-radio {
+    background-color: white;
+    border-radius: 100%;
+    width: 1.5em;
+    height: 1.5em;
+        transition: all 0.5s ease-in-out;
+	transform-style: preserve-3d;
+}
+		
+		
+		
+		
+		
+		/* my challenge */
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+	
+	</style>
+	
+	</head>
+
+	<body>
+		<div id="all1">  
+			</div>
+		
+		<h1 id="h1"><strong><b>  our pricing </b> </strong></h1> 
+		
+		
+	<!--	<h2 id="h2">Monthly   <div class="btn-radio"></div> Annualy</h2> -->
+		
+		 <div class="selector">
+      <span class="gray">Monthly</span>
+      <div class="btn-bg purple-bg">
+        <div class="btn-radio"></div>
+      </div>
+      <span class="gray">Annually</span>
+    </div>
+		
+		
+	
+	<div id="all">
+		
+		
+		<div id="cart1">
+			
+		
+			
+			<h4>Basic</h4>
+			
+			<br>
+			<header id="header1" style="opacity: 0.9;"><strong> $19.99 </strong></header>
+			<br>
+			<hr style="width: 280px;">
+			<h3 style="opacity: 0.7;">500 GB Storage</h3>
+			<hr style="width: 280px;">
+			<h3 style="opacity: 0.7;">2 Users Allowed</h3>
+			<hr style="width: 280px;">
+			<h3 style="opacity: 0.7;">Send up to 3 GB</h3>
+			<hr style="width: 280px;">
+			<br>
+		<a href="#">	<button onmouseleave="normalback();" onmouseenter="changeback();"><strong> Learn More </strong></button> </a>
+				
+			
+			
+		
+		
+		</div>
+		
+		
+		<div id="cart2">
+			
+			
+			<h4 style="color:white;">Professional</h4>
+			
+			<br>
+			<header id="header2"><strong style="color:white;"> $24.99 </strong></header>
+			<br>
+			<hr style="width: 280px;">
+			<h3>1 TB Storage</h3>
+			<hr style="width: 280px;">
+			<h3>5 Users Allowed</h3>
+			<hr style="width: 280px;">
+			<h3>Send up to 10 GB</h3>
+			<hr style="width: 280px;">
+			<br>
+		<a href="#">	<button onmouseleave="normalback();" onmouseenter="changeback();" id="button2"><strong> Learn More </strong></button> </a>
+				
+		
+		</div>
+		
+		<div id="cart3">
+			
+			
+			
+			<h4>Master</h4>
+			
+			<br>
+			<header id="header3" style="opacity: 0.9;"><strong> $39.99 </strong></header>
+			<br>
+			<hr style="width: 280px;">
+			<h3 style="opacity: 0.7;">2 TB Storage</h3>
+			<hr style="width: 280px;">
+			<h3 style="opacity: 0.7;">10 Users Allowed</h3>
+			<hr style="width: 280px;">
+			<h3 style="opacity: 0.7;">Send up to 20 GB</h3>
+			<hr style="width: 280px;">
+			<br>
+		<a href="#">	<button onmouseleave="normalback();" onmouseenter="changeback();">  <strong >  Learn More </strong> </button> </a>
+				
+		
+		</div>
+		
+		
+		
+		
+		
+		
+		</div>
+	
+	
+	
+	
+
+	
+	 
+	
+	
+	
+	
+	
+
+	<script>
+		document.querySelector(".btn-bg").addEventListener("click", function () {
+            document.querySelector(".btn-radio").classList.toggle("transition");
+            if (document.querySelector(".btn-radio").classList.contains("transition")) {
+                    window.header1.innerHTML = "<strong>$199.99</strong>";
+                    window.header2.innerHTML = "<strong>$249.99</strong>";
+                    window.header3.innerHTML = "<strong>$399.99</strong>";
+				
+                } else {
+                    window.header1.innerHTML = "<strong>$19.99 </strong>";
+                   window.header2.innerHTML = "<strong>$24.99</strong>";
+                    window.header3.innerHTML = "<strong>$39.99</strong>";
+					
+				
+					//window.header2.style.fontFamily="sans-serif";
+			
+				//	window.header3.style.fontFamily="sans-serif";
+				
+                }
+            });
+		
+		
+		function changeback() {
+			
+			window.all1.style.backgroundColor="#262655";
+			window.all1.style.opacity=0.7;
+			window.h2.style.color="white";
+			window.h1.style.color="grey";
+			
+			
+		}
+		
+		function normalback() {
+			
+			window.all1.style.opacity=0;
+			
+				window.h2.style.color="black";
+			window.h1.style.color="black";
+			
+		/*	window.all1.style.display="none";
+			window.all1.style.display="block"; */
+		}
+		
+		
+		
+		
+		
+		</script>
+	
+	
+	
+	
+	
+	
+	
+	</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
